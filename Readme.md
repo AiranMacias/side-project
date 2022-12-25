@@ -1,1 +1,1 @@
-Visit our best video: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+For learning tutorials: https://www.youtube.com/watch?v=dQw4w9WgXcQ
