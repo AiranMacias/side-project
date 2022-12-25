@@ -43,5 +43,6 @@ def shipping_option_selector():
     
 
 shipping_option_selector()
-vscode-pets.start
+print("Thank you for Shopping")
+input("press any key to exit")
 
