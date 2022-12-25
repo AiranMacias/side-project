@@ -8,13 +8,15 @@ def weight_checker():
     try:
         weight_input = float(input("What is the weight(In pounds) of your package? "))
     except ValueError:
+        print("Pls put valid input")
         return weight_checker()
 
 def shipping_option_checker():
     global shipping_option
-    while(not shipping_option in shipping_options):
-        shipping_option = input("input what shipping option you want('Ground', 'Ground Premium', 'Drone')")
-
+    shipping_option = input("input what shipping option you want('Ground', 'Ground Premium', 'Drone')")
+    if not shipping_option in shipping_options:
+        print("Please put valid input")
+        shipping_option_checker()
 
 #ground Shipping price calculate
 def ground_rate():
