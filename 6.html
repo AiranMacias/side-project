@@ -1,0 +1,21 @@
+<html>
+	<body>
+	
+		<label />Radius <input type='text' id="radius" style="display: block"></label>
+		<label />Height <input type='text' id="height" style="display: block"></label>
+		<input type='button' style="display: block" onclick="calculate()" value="Calculate"></input>
+		<label />Volume :</label> <label id="volume" style="display: block"s></label>
+		
+		<script type="application/javascript">
+			
+			function calculate(){
+				
+				var r = document.getElementById("radius").value;
+				var h = document.getElementById("height").value;
+				
+				document.getElementById("volume").innerHTML = (Math.PI * Math.pow(r, 2) * h).toFixed(4);
+			}
+			
+		</script>
+	</body>
+</html>

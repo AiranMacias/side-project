@@ -1,0 +1,45 @@
+<html>
+	<body>
+	
+		<label />Unsorted: <label id="unsorted" style="display: block"></label>
+		<label />Sorted: <label id="sorted" style="display: block"s></label>
+		<label />Time Between Function: <label id="time" />
+		
+		<script type="application/javascript">
+			
+			var numbers = [51, 43 ,7 ,22 ,10 ,4 ,66 ,29 ,28, 16];
+			
+			function insertionSort(arr) {
+			
+				let n = arr.length;
+				
+				for (let i = 1; i < n; i++) {
+					let current = arr[i];
+					let j = i-1; 
+					while ((j > -1) && (current < arr[j])) {
+						arr[j+1] = arr[j];
+						j--;
+					}
+					arr[j+1] = current;
+				}
+				
+				return arr;
+			}
+			
+			function set_text(element_id, value){
+				document.getElementById(element_id).innerHTML = String(value);
+			}
+			
+			set_text("unsorted", numbers);
+			
+			var time_between = performance.now();
+			
+			set_text("sorted", insertionSort(numbers));
+			
+			var time_between = performance.now() - time_between;
+			
+			set_text("time", time_between.toFixed(2) + "s");
+			
+		</script>
+	</body>
+</html>
