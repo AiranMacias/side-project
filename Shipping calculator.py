@@ -1,8 +1,20 @@
-weight_input = input("What is the weight(In pounds) of your package? ")
-
-shipping_option = input("input what shipping option you want('Ground', 'Ground Premium', 'Drone')")
-
+weight_input = 1.0
+shipping_option = ""
+shipping_options = ['Ground', 'Ground Premium', 'Drone']
 price = 1
+
+def weight_checker():
+    global weight_input 
+    try:
+        weight_input = float(input("What is the weight(In pounds) of your package? "))
+    except ValueError:
+        return weight_checker()
+
+def shipping_option_checker():
+    global shipping_option
+    while(not shipping_option in shipping_options):
+        shipping_option = input("input what shipping option you want('Ground', 'Ground Premium', 'Drone')")
+
 
 #ground Shipping price calculate
 def ground_rate():
@@ -42,6 +54,8 @@ def shipping_option_selector():
         ground_premium()
     
 
+weight_checker()
+shipping_option_checker()
 shipping_option_selector()
 print("Thank you for Shopping")
 input("press any key to exit")
