@@ -13,14 +13,12 @@ def weight_checker():
         print("Pls put valid input")
         return weight_checker()
 
-
 def shipping_option_checker():
     global shipping_option
     shipping_option = input("input what shipping option you want('Ground', 'Ground Premium', 'Drone')")
     if not shipping_option in shipping_options:
         print("Please put valid input")
         shipping_option_checker()
-
 
 # ground Shipping price calculate
 def ground_rate():
@@ -52,7 +50,6 @@ def drone_rate():
 def ground_premium():
     print("Total Price: $" + str(125))
 
-
 # a function to select what to do if
 def shipping_option_selector():
     if shipping_option == "Ground":
@@ -61,9 +58,6 @@ def shipping_option_selector():
         drone_rate()
     if shipping_option == "Ground Premium":
         ground_premium()
-
-
-
 
 def re_order():
     global re_order_options
