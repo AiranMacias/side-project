@@ -1,0 +1,7 @@
+git branch -M branch_name
+git fetch origin
+git checkout ## master / branch name, ex. main or master ##
+git merge origin/## master / branch name, ex. main or master ##
+
+####OR####
+git pull #####OR##### git pull repo branch name
