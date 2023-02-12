@@ -53,20 +53,11 @@ class WeatherApps(QMainWindow):
         self.wind = QLabel(f"Wind Speed: ", self)
         self.wind.setGeometry(0, 140, 200, 25)
         self.wind.setFont(QFont("Sanserif", 15))
-
-
         self.weather_icon = QLabel(self)
 
 
-
-
-
-
-
-
-
 # this function when the search button is clicked it gets the input from the Line edit and then searches for the city
-# get then searches for the city get the data from the api and updates the labels and shows the temp,weather and city
+# get then searches for the city get the data from the api and updates the labels and shows the temp,weather,weather icon  and city
     def search_city(self):
         search = self.user_input.text()
         weather_data = requests.get(
@@ -91,10 +82,8 @@ class WeatherApps(QMainWindow):
         self.city_name.setText(f"City: {city}")
         self.country.setText(f'Country: {country}')
         self.wind.setText(f"Wind Speed: {wind}")
-
-
-
-
+        
+        
 def main():
     weather_app = QApplication([])
     weather_app_window = WeatherApps()
